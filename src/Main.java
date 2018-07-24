@@ -1,29 +1,28 @@
 public class Main {
 
     public static void main(String[] args) {
-	    double val1 = 100.0d;
-	    double val2 = 50.0d;
-	    double result;
-	    char operation = 'd';
+    	double[] leftVals = {100.0d, 25.0d, 225.0d, 11.0d};
+    	double[] rightVals = {50.0d, 92.0d, 17.0d, 3.0d};
+    	char[] operators = {'d', 'a', 's', 'm'};
+    	double[] results = new double[operators.length];
 
-	    if (operation == 'a')
-	        result = val1 + val2;
-	    else if (operation == 's')
-	        result = val1 - val2;
-	    else if (operation == 'd')
-	    	result = val2 != 0.0d ? val1 / val2 : 0.0d;
-//	    	if (val2 != 0.0d) {
-//	        	result = val1 / val2;
-//	    	}
-//	    	else {
-//	    		result = 0.0d;
-//			}
-	    else if (operation == 'm')
-	        result = val1 * val2;
-	    else {
-			System.out.println("Error - invalid operation");
-			result = 0.0d;
+		for (int i = 0; i < operators.length; i++) {
+			if (operators[i] == 'a')
+				results[i] = leftVals[i] + rightVals[i];
+			else if (operators[i] == 's')
+				results[i] = leftVals[i] - rightVals[i];
+			else if (operators[i] == 'd')
+				results[i] = rightVals[i] != 0.0d ? leftVals[i] / rightVals[i] : 0.0d;
+			else if (operators[i] == 'm')
+				results[i] = leftVals[i] * rightVals[i];
+			else {
+				System.out.println("Error - invalid operators[i");
+				results[i] = 0.0d;
+			}
 		}
-        System.out.println(result);
-    }
+		for (double theResult: results) {
+			System.out.print("result = ");
+			System.out.println(theResult);
+		}
+	}
 }
