@@ -7,17 +7,23 @@ public class Main {
     	double[] results = new double[operators.length];
 
 		for (int i = 0; i < operators.length; i++) {
-			if (operators[i] == 'a')
-				results[i] = leftVals[i] + rightVals[i];
-			else if (operators[i] == 's')
-				results[i] = leftVals[i] - rightVals[i];
-			else if (operators[i] == 'd')
-				results[i] = rightVals[i] != 0.0d ? leftVals[i] / rightVals[i] : 0.0d;
-			else if (operators[i] == 'm')
-				results[i] = leftVals[i] * rightVals[i];
-			else {
-				System.out.println("Error - invalid operators[i");
-				results[i] = 0.0d;
+			switch(operators[i]) {
+				case 'a':
+					results[i] = leftVals[i] + rightVals[i];
+					break;
+				case 's':
+					results[i] = leftVals[i] - rightVals[i];
+					break;
+				case 'd':
+					results[i] = rightVals[i] != 0.0d ? leftVals[i] / rightVals[i] : 0.0d;
+					break;
+				case 'm':
+					results[i] = leftVals[i] * rightVals[i];
+					break;
+				default:
+					System.out.println("Error - invalid operators[i");
+					results[i] = 0.0d;
+					break;
 			}
 		}
 		for (double theResult: results) {
