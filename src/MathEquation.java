@@ -1,7 +1,7 @@
 public class MathEquation {
     private double leftVal;
     private double rightVal;
-    private char operator;
+    private char operator = 'a';
     private double result;
 
     public double getLeftVal() { return leftVal;}
@@ -25,6 +25,12 @@ public class MathEquation {
         this(operator);
         this.leftVal = leftVal;
         this.rightVal = rightVal;
+    }
+
+    public void execute(double leftVal, double rightVal){
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+        execute();
     }
 
     public void execute(){
