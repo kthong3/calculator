@@ -1,8 +1,19 @@
 public class MathEquation {
-    public double leftVal;
-    public double rightVal;
-    public char operator;
-    public double result;
+    private double leftVal;
+    private double rightVal;
+    private char operator;
+    private double result;
+
+    public double getLeftVal() { return leftVal;}
+    public void setLeftVal(double leftVal) { this.leftVal = leftVal;}
+
+    public double getRightVal() { return rightVal;}
+    public void setRightVal(double rightVal) { this.rightVal = rightVal;}
+
+    public double getOperator() { return operator;}
+    public void setOperator(char operator) { this.operator = operator;}
+
+    public double getResult(){return result;}
 
     public void execute(){
         switch(operator) {

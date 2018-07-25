@@ -10,15 +10,15 @@ public class Main {
 		for (MathEquation equation: equations) {
 			equation.execute();
 			System.out.print("result = ");
-			System.out.println(equation.result);
+			System.out.println(equation.getResult());
 		}
 	}
 
 	public static MathEquation create(double leftVal, double rightVal, char operator){
     	MathEquation equation = new MathEquation();
-    	equation.leftVal = leftVal;
-    	equation.rightVal = rightVal;
-    	equation.operator = operator;
+    	equation.setLeftVal(leftVal);
+    	equation.setRightVal(rightVal);
+    	equation.setOperator(operator);
     	return equation;
 	}
 }
