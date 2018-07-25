@@ -15,6 +15,18 @@ public class MathEquation {
 
     public double getResult(){return result;}
 
+    public MathEquation(){}
+
+    public MathEquation(char operator){
+        this.operator = operator;
+    }
+
+    public MathEquation(char operator, double leftVal, double rightVal){
+        this(operator);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
+
     public void execute(){
         switch(operator) {
             case 'a':
