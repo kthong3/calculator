@@ -4,3 +4,4 @@ simple java application to learn how to:
 - set initial state using constructors and constructor chaining.
 - implement method overloading in classes.
 - implement typecasting from parameter widening and truncating.
+- implement inheritance with abstract class
