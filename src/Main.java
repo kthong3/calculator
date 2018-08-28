@@ -1,6 +1,24 @@
 public class Main {
 
     public static void main(String[] args) {
+//		useMathEquation();
+//		useCalculatorBase();
+
+		String[] statements = {
+				"divide 100.0 50.0",
+				"add 25.0 92.0",
+				"subtract 225.0 17.0",
+				"multiply 11.0 3.0"
+		};
+
+		CalculateHelper helper = new CalculateHelper();
+		for (String statement:statements) {
+			helper.process(statement);
+			System.out.println(helper);
+		}
+	}
+
+	static void useMathEquation(){
 		MathEquation[] equations = new MathEquation[4];
 		equations[0] = new MathEquation('d', 100.0d, 50.0d);
 		equations[1] = new MathEquation('a', 25.0d, 92.0d);
@@ -39,7 +57,9 @@ public class Main {
 		System.out.println();
 		System.out.println("Using Inheritance");
 		System.out.println();
+	}
 
+	static void useCalculatorBase(){
 		CalculateBase[] calculators = {
 				new Divider(100.0d, 50.0d),
 				new Adder(25.0d, 92.0d),
