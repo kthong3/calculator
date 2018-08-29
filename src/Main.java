@@ -16,12 +16,18 @@ public class Main {
 
 		CalculateHelper helper = new CalculateHelper();
 		for (String statement:statements) {
-			helper.process(statement);
-			System.out.println(helper);
+			try {
+				helper.process(statement);
+				System.out.println(helper);
+			} catch (InvalidStatementException e) {
+				System.out.println(e.getMessage());
+				if (e.getCause() != null)
+					System.out.println("  Original exception: " + e.getCause().getMessage());
+			}
 		}
 	}
 
-	static void useMathEquation(){
+	static void useMathEquation() {
 		MathEquation[] equations = new MathEquation[4];
 		equations[0] = new MathEquation('d', 100.0d, 50.0d);
 		equations[1] = new MathEquation('a', 25.0d, 92.0d);
@@ -62,7 +68,7 @@ public class Main {
 		System.out.println();
 	}
 
-	static void useCalculatorBase(){
+	static void useCalculatorBase() {
 		CalculateBase[] calculators = {
 				new Divider(100.0d, 50.0d),
 				new Adder(25.0d, 92.0d),

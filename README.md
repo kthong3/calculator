@@ -5,4 +5,5 @@ simple java application to learn how to:
 - implement method overloading in classes.
 - implement typecasting from parameter widening and truncating.
 - implement inheritance with abstract class
-- use String methods, wrapper classes, final fields, and enumeration types 
+- use String methods, wrapper classes, final fields, and enumeration types
+- create custom Exception and implement try/catch block for error handling 
