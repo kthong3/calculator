@@ -1,6 +1,6 @@
 package calculator;
 
-public enum MathCommand {
+enum MathCommand {
     Add,
     Subtract,
     Multiply,
