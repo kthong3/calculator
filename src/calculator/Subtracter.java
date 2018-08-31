@@ -1,3 +1,5 @@
+package calculator;
+
 public class Subtracter extends CalculateBase {
     public Subtracter(){}
     public Subtracter(double leftVal, double rightVal){

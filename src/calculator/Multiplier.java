@@ -1,3 +1,5 @@
+package calculator;
+
 public class Multiplier extends CalculateBase {
     public Multiplier(){}
     public Multiplier(double leftVal, double rightVal){

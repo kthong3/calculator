@@ -1,3 +1,5 @@
+package calculator;
+
 public class Adder extends CalculateBase {
     public Adder(){}
     public Adder(double leftVal, double rightVal){
