@@ -9,6 +9,7 @@ import calculator.InvalidStatementException;
 import calculator.MathEquation;
 import calculator.MathProcessing;
 import calculator.Multiplier;
+import calculator.PowerOf;
 import calculator.Subtracter;
 
 public class Main {
@@ -20,10 +21,12 @@ public class Main {
 
 		String[] statements = {
 				"add 25.0 92.0",	// 25.0 + 92.0 = 117.0
+				"power 5.0 2.0"		// 5.0 ^ 2.0 = 25.0
 		};
 
 		DynamicHelper helper = new DynamicHelper(new MathProcessing[] {
-				new Adder()
+				new Adder(),
+				new PowerOf()
 		});
 
 		for (String statement: statements) {
