@@ -9,3 +9,4 @@ simple java application to learn how to:
 - create custom Exception and implement try/catch block for error handling. 
 - implement separating calculator into packages.  
 - implement package private.
+- declare and implement an interface. 

@@ -4,8 +4,10 @@ import calculator.Adder;
 import calculator.CalculateBase;
 import calculator.CalculateHelper;
 import calculator.Divider;
+import calculator.DynamicHelper;
 import calculator.InvalidStatementException;
 import calculator.MathEquation;
+import calculator.MathProcessing;
 import calculator.Multiplier;
 import calculator.Subtracter;
 
@@ -15,12 +17,18 @@ public class Main {
 //		useMathEquation();
 //		useCalculatorBase();
 // 		useCalculateHelper();
+
 		String[] statements = {
 				"add 25.0 92.0",	// 25.0 + 92.0 = 117.0
 		};
 
-		for (String statement: statements) {
+		DynamicHelper helper = new DynamicHelper(new MathProcessing[] {
+				new Adder()
+		});
 
+		for (String statement: statements) {
+			String output = helper.process(statement);
+			System.out.println(output);
 		}
 	}
 
